@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        body {
+            margin: 0;
+            background: #111;
+            font-family: Arial, sans-serif;
+        }
+
+        .overlay {
+            width: 300px;
+            padding: 20px;
+            margin: 20px;
+
+            background-color: #1a1a1a;
+            border: 2px solid #ff4655;
+            border-radius: 12px;
+
+            color: white;
+        }
+
+        .name {
+            font-size: 18px;
+        }
+
+        .rank {
+            font-size: 30px;
+            font-weight: bold;
+            color: #ff4655;
+            margin-top: 10px;
+        }
+
+        .rr {
+            font-size: 20px;
+            margin-top: 5px;
+        }
+
+        .rank-row {
+            display: flex;
+            align-items: center;
+        }
+
+        .rank-icon {
+            width: 70px;
+            height: 70px;
+            margin-left: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+    <div class="name">
+        {{ player.name }}
+    </div>
+
+    <div class="rank-row">
+
+        <div>
+
+            <div class="rank">
+                {{ player.rank }}
+            </div>
+
+            <div class="rr">
+                {{ player.rr }} RR
+            </div>
+
+        </div>
+
+        <img
+            class="rank-icon"
+            src="/static/{{ player.rank_image }}"
+            alt="Rank Icon"
+        >
+
+    </div>
+
+</div>
+
+</body>
+</html>
